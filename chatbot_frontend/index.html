@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> AqarAI Chatbot </title>
+    <link rel="icon" type="image/png" href="static/images/favicon.png">
+
+    <!-- Stylesheet linked -->
+    <link rel="stylesheet" href="static/css/style.css">
+    
+    <!-- Markdown formatter -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <button id="chatbot-toggle-btn"> 
+        Chat with AqarAI
+    </button>
+
+    
+
+    <div id="main"> </div>
+    <div id="chatbox">
+
+        <div id="overlay"> </div>
+
+    <!-- Sidebar -->
+    <button id="sidebar-toggle" title="Chat History">&equiv;</button>
+    <div id="sidebar"> 
+        <div class="sidebar_header"> 
+            <img src="static/images/favicon.png">
+            <h4> Chat History</h4>
+
+        </div>
+
+        <!-- <button id="close-sidebar-btn" title="Close Sidebar">x</button> -->
+       
+        <button id="new-convo-btn"> New Conversation 
+            <span> + </span>
+        </button>
+       
+        <div id="sidebar-content">
+            <!-- buttons come up -->
+        </div>
+
+        <!-- User Info Section -->
+        <div id="user-info">
+            <!-- <div class="user-bar">
+                <img id="user-pfp" src="static/images/436-4363443_view-user-icon-png-font-awesome-user-circle.png" alt="User Profile Picture">
+                <span id="user-id">User</span>
+            </div> -->
+
+            <button id="delete-all-btn" title="Delete All Conversations"><img id="trash" src="static/images/trash-2-xxl-2.png" alt="Delete All" title="Delete All Conversations"></button>
+        </div>
+
+    </div>
+
+        <!-- Header Bar -->
+        <div id="header">
+            <img src="static/images/logo.png" alt="logo">
+            <button id="close-btn" title="Close">&times;</button>
+        </div>
+        
+        <!-- Messages Section -->
+        <div id="messages">
+            <img src="static/images/bot_home.png" alt="bot">
+        </div>
+
+        <!-- Prompt Buttons Section -->
+        <div id="prompts">
+
+            <div id="pre-typed-buttons"></div>
+
+            <!-- Floating Action Button -->
+            <div id="fab-container">
+                <button id="fab-btn" class="fab"> Try A.I. Prompts!</button>
+                <div id="question-buttons" class="hidden"></div>
+            </div>
+
+        </div>
+
+        <!-- Input Section -->
+        <div id="input-area">
+            <button id="clear-btn"> New Chat</button>
+            <input type="text" id="input-box" placeholder="Ask me anything about real estate.">
+            <button id="send-button"><img src="static/images/send.svg" title="Send"></button>
+        </div>
+
+        <!-- Terms and Conditions Section -->
+        <div id="terms">
+            <a id="terms-link" href="#"> Review Terms and Conditions</a>
+        </div>
+
+        <div id="terms-modal">
+            <div id="terms-modal-content">
+                <div id="terms-modal-header">
+                    <h2>Terms and Conditions</h2>
+                    <button id="terms-modal-close">&times;</button>
+                </div>
+                <p> By using AqarAI, an artificial intelligence tool designed for real estate advice in the UAE, you agree to the following terms. AqarAI provides general informational support and is not a substitute for professional advice. The responses from this AI tool are based on its programming and available data and may not always be accurate or complete. <br> <br>
+                
+It is your responsibility to independently verify any advice before making decisions. You are solely responsible for any actions or decisions based on AqarAI’s information and should consult qualified real estate experts or legal professionals for personalised advice. <br> <br>
+
+AqarAI and its developers are not liable for any loss or damage resulting from the use of this AI tool. </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <p id="confirm-message"></p>
+            <div class="confirm-buttons">
+                <button id="confirm-no">Cancel</button>
+                <button id="confirm-yes">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input Modal -->
+    <div id="input-modal" class="modal">
+        <div class="modal-content">
+            <span id="input-modal-close" class="modal-close"></span>
+            <input type="text" id="input-field" placeholder="Enter new name...">
+            <button id="input-cancel">Cancel</button>
+            <button id="input-submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- Scriptsheet linked -->
+    <script src="static/js/script.js"></script>
+
+</body>
+</html>
+
